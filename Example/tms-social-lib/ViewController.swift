@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let twitter = TMSTwitter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,17 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction private func didSelectLoginViaTwitter(_ sender: UIButton) {
+        twitter.login { (result) in
+            switch result {
+            case .success(let session):
+                print(session)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
 }

@@ -2,7 +2,6 @@
 
 import Quick
 import Nimble
-import tms-social-lib
 
 class TableOfContentsSpec: QuickSpec {
     override func spec() {
