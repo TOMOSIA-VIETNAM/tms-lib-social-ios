@@ -3,7 +3,9 @@ use_frameworks!
 platform :ios, '9.0'
 
 target 'tms-social-lib_Example' do
-  pod 'tms-social-lib', :path => '../'
+  #pod 'tms-social-lib', :path => '../'
+
+  pod 'TwitterKit5', '5.2.0'
 
   target 'tms-social-lib_Tests' do
     inherit! :search_paths
@@ -11,6 +13,6 @@ target 'tms-social-lib_Example' do
     pod 'Quick', '~> 2.2.0'
     pod 'Nimble', '~> 8.0.7'
     pod 'FBSnapshotTestCase' , '~> 2.1.4'
-    pod 'Nimble-Snapshots' , '~> 8.0.0'
+    # pod 'Nimble-Snapshots' , '~> 8.0.0'
   end
 end
