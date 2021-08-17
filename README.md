@@ -13,12 +13,14 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-- Swift 5 & Xcode 12
-- iOS 9 and later
+- Swift 5.2 & Xcode 12
+- iOS 12 and later
 
 ## Usage
 
-[How to use login via Twitter?](./README/Twitter.md)
+- [How to use login via Facebook?](./README/Facebook.md)
+- [How to use login via Twitter?](./README/Twitter.md)
+- [How to use login via Line?](./README/Line.md)
 
 ## Installation
 
@@ -26,12 +28,12 @@ tms-social-lib is available through [CocoaPods](https://cocoapods.org). To insta
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'tms-social-lib'
+pod 'tms-social-lib', '~> 1.0.0'
 ```
 
 ## Author
 
-Phuong Vo, phuong.vo@tomosia.com
+Tomosia Viet Nam Co.Ltd
 
 ## License
 

@@ -1,9 +1,28 @@
 PODS:
+  - FacebookCore (0.9.0):
+    - FBSDKCoreKit (~> 5.0)
+  - FacebookLogin (0.9.0):
+    - FacebookCore (~> 0.9.0)
+    - FBSDKCoreKit (~> 5.0)
+    - FBSDKLoginKit (~> 5.0)
+  - FBSDKCoreKit (5.15.1):
+    - FBSDKCoreKit/Basics (= 5.15.1)
+    - FBSDKCoreKit/Core (= 5.15.1)
+  - FBSDKCoreKit/Basics (5.15.1)
+  - FBSDKCoreKit/Core (5.15.1):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (5.15.1):
+    - FBSDKLoginKit/Login (= 5.15.1)
+  - FBSDKLoginKit/Login (5.15.1):
+    - FBSDKCoreKit (~> 5.0)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
+  - LineSDKSwift (5.7.0):
+    - LineSDKSwift/Core (= 5.7.0)
+  - LineSDKSwift/Core (5.7.0)
   - Nimble (8.0.9)
   - Quick (2.2.1)
   - TwitterCore (3.2.0)
@@ -11,26 +30,39 @@ PODS:
     - TwitterCore (>= 3.1.0)
 
 DEPENDENCIES:
+  - FacebookCore (~> 0.9.0)
+  - FacebookLogin (~> 0.9.0)
   - FBSnapshotTestCase (~> 2.1.4)
+  - LineSDKSwift (~> 5.0)
   - Nimble (~> 8.0.7)
   - Quick (~> 2.2.0)
-  - TwitterKit5 (= 5.2.0)
+  - TwitterKit5 (~> 5.2.0)
 
 SPEC REPOS:
   trunk:
+    - FacebookCore
+    - FacebookLogin
+    - FBSDKCoreKit
+    - FBSDKLoginKit
     - FBSnapshotTestCase
+    - LineSDKSwift
     - Nimble
     - Quick
     - TwitterCore
     - TwitterKit5
 
 SPEC CHECKSUMS:
+  FacebookCore: ba86524b66cfa86d0f8e65d08faa8504a9f732dd
+  FacebookLogin: 6cee9fd6e1fe976fe8f7eec199e27b28b14f5d63
+  FBSDKCoreKit: 1d5acf7c9d7a2f92bb1a242dc60cae5b7adb91df
+  FBSDKLoginKit: f1ea8026a58b52d30c9f2e6a58ca7d813619fb83
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  LineSDKSwift: f9c232f89185b887b5725aa278325f3a23e33bbc
   Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
   Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit5: 64095dfefcf39be2355711ef27112d55e340d90e
 
-PODFILE CHECKSUM: a379372f55dd5167e0a15afc73b85bdbe9192ce0
+PODFILE CHECKSUM: c466b2dd695e6a62e16b3ebd9b4c48615f173642
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.2

@@ -1,4 +1,4 @@
-//  TwitterSocial.swift
+//  TMSTwitter.swift
 //  tms-social-lib
 
 import Foundation
@@ -6,16 +6,16 @@ import TwitterCore
 import TwitterKit
 
 public struct TMSConfiguration {
-    var consumerKey: String
-    var consumerSecret: String
-    var accessGroup: String?
+    public let consumerKey: String
+    public let consumerSecret: String
+    public var accessGroup: String?
 }
 
 public struct TMSTwitterSession {
-    var authToken: String
-    var authTokenSecret: String
-    var userName: String
-    var userID: String
+    public var authToken: String
+    public var authTokenSecret: String
+    public var userName: String
+    public var userID: String
 }
 
 public enum TMSTwitterResult {
@@ -24,7 +24,6 @@ public enum TMSTwitterResult {
 }
 
 public class TMSTwitter {
-    
     /// Start Twitter with a consumer key, secret, and keychain access group in TMSConfiguration
     /// - Parameter configuration: Contains consumerKey, consumerSecret and accessGroup on Twitter App Page
     class func configuration(_ configuration: TMSConfiguration) {
@@ -77,7 +76,7 @@ public class TMSTwitter {
     ///   - url: The `URL` instance received as a parameter
     ///   - options: The options dictionary received as a parameter.
     /// - Returns: Boolean specifying whether this URL was handled by Twitter Kit or not
-    public class func application(_ application: UIApplication, openURL url: URL, options: [AnyHashable: Any]) -> Bool {
+    public class func application(_ application: UIApplication, open url: URL, options: [AnyHashable: Any] = [:]) -> Bool {
         return TWTRTwitter.sharedInstance().application(application, open: url, options: options)
     }
 
@@ -96,7 +95,7 @@ public class TMSTwitter {
 }
 
 extension TWTRSession {
-    func mapTMSSession() -> TMSTwitterSession {
+    public func mapTMSSession() -> TMSTwitterSession {
         return TMSTwitterSession(authToken: authToken,
                                  authTokenSecret: authTokenSecret,
                                  userName: userName,

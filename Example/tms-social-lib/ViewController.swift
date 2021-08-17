@@ -9,8 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    let twitter = TMSTwitter()
+    let facebookSDK = TMSFacebook()
+    let twitterSDK = TMSTwitter()
+    let lineSDK = TMSLine()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,17 +22,37 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction private func didSelectLoginViaTwitter(_ sender: UIButton) {
-        twitter.login { (result) in
+
+    @IBAction private func didSelectLoginViaFacebook(_ sender: UIButton) {
+        facebookSDK.login(controller: self) { result in
             switch result {
-            case .success(let session):
-                print(session)
-            case .failure(let error):
+            case let .success(profile):
+                print(profile)
+            case let .failure(error):
                 print(error)
             }
         }
     }
 
-}
+    @IBAction private func didSelectLoginViaTwitter(_ sender: UIButton) {
+        twitterSDK.login { result in
+            switch result {
+            case let .success(session):
+                print(session)
+            case let .failure(error):
+                print(error)
+            }
+        }
+    }
 
+    @IBAction private func didSelectLoginViaLine(_ sender: UIButton) {
+        lineSDK.login(in: self) { result in
+            switch result {
+            case let .success(account):
+                print(account)
+            case let .failure(error):
+                print(error)
+            }
+        }
+    }
+}
