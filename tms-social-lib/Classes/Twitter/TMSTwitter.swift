@@ -24,7 +24,6 @@ public enum TMSTwitterResult {
 }
 
 public class TMSTwitter {
-    
     /// Start Twitter with a consumer key, secret, and keychain access group in TMSConfiguration
     /// - Parameter configuration: Contains consumerKey, consumerSecret and accessGroup on Twitter App Page
     class func configuration(_ configuration: TMSConfiguration) {
