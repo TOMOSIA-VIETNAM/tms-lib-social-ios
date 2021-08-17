@@ -13,12 +13,13 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-- Swift 5 & Xcode 12
-- iOS 9 and later
+- Swift 5.2 & Xcode 12
+- iOS 12 and later
 
 ## Usage
 
 [How to use login via Twitter?](./README/Twitter.md)
+[How to use login via Line?](./README/Line.md)
 
 ## Installation
 

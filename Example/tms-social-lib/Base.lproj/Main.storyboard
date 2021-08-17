@@ -19,14 +19,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vhz-1v-jfU">
-                                <rect key="frame" x="30" y="318.5" width="315" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vhz-1v-jfU">
+                                <rect key="frame" x="30" y="296" width="315" height="75"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abw-g2-QvK">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
                                         <state key="normal" title="Login via Twitter"/>
                                         <connections>
                                             <action selector="didSelectLoginViaTwitter:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7C8-0U-nOE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5g-bG-90E">
+                                        <rect key="frame" x="0.0" y="45" width="315" height="30"/>
+                                        <state key="normal" title="Login via Line"/>
+                                        <connections>
+                                            <action selector="didSelectLoginViaLine:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wLM-xL-AaO"/>
                                         </connections>
                                     </button>
                                 </subviews>
