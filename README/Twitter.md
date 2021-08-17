@@ -3,7 +3,7 @@
 #### Setup
 - Register your project in [Twitter Developer Page](https://developer.twitter.com/en/portal/dashboard).
 - Generate **Consumer Key** and **Consumer Secret** in your project. You will see that in image below
-![image](./README/asset/consumer key.png)
+  ![image info](/README/asset/consumer%20key.png)
 - Import configure twitter to **Info.plist** file 
 ```
 	<key>CFBundleURLTypes</key>
@@ -43,9 +43,10 @@
     twitter.login { (result) in
             switch result {
             case .success(let session):
-                print(session)
+                // Handle your code when login is successful
             case .failure(let error):
-                print(error)
+                // Handle your code when login is failed
             }
         }
 ```
+- Get account profile when user is logged in 

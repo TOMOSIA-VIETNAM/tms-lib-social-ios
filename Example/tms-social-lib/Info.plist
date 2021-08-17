@@ -28,6 +28,14 @@
 				<string>twitterkit-aHGfxgpOOT4gyknqVh20sNq6r</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>line3rdp.$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
@@ -35,6 +43,7 @@
 	<array>
 		<string>twitterauth</string>
 		<string>twitter</string>
+		<string>lineauth2</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

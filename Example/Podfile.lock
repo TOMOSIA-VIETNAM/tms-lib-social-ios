@@ -4,6 +4,9 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
+  - LineSDKSwift (5.7.0):
+    - LineSDKSwift/Core (= 5.7.0)
+  - LineSDKSwift/Core (5.7.0)
   - Nimble (8.0.9)
   - Quick (2.2.1)
   - TwitterCore (3.2.0)
@@ -12,13 +15,15 @@ PODS:
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
+  - LineSDKSwift (~> 5.0)
   - Nimble (~> 8.0.7)
   - Quick (~> 2.2.0)
-  - TwitterKit5 (= 5.2.0)
+  - TwitterKit5 (~> 5.2.0)
 
 SPEC REPOS:
   trunk:
     - FBSnapshotTestCase
+    - LineSDKSwift
     - Nimble
     - Quick
     - TwitterCore
@@ -26,11 +31,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  LineSDKSwift: f9c232f89185b887b5725aa278325f3a23e33bbc
   Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
   Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit5: 64095dfefcf39be2355711ef27112d55e340d90e
 
-PODFILE CHECKSUM: a379372f55dd5167e0a15afc73b85bdbe9192ce0
+PODFILE CHECKSUM: 045f84a750597c01ab7f0198da570c98e9467d32
 
 COCOAPODS: 1.10.1
