@@ -28,7 +28,7 @@
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         TMSLine.setup(channelID: {CHANNEL_ID})
         return true
-}
+    }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         return TMSLine.application(app, open: url, options: options)
