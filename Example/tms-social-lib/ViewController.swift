@@ -9,8 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    let twitter = TMSTwitter()
+    let twitterSDK = TMSTwitter()
+    let lineSDK = TMSLine()
+    let googleSDK = TMSGoogle()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,17 +22,37 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     @IBAction private func didSelectLoginViaTwitter(_ sender: UIButton) {
-        twitter.login { (result) in
+        twitterSDK.login { result in
             switch result {
-            case .success(let session):
+            case let .success(session):
                 print(session)
-            case .failure(let error):
+            case let .failure(error):
                 print(error)
             }
         }
     }
 
-}
+    @IBAction private func didSelectLoginViaLine(_ sender: UIButton) {
+        lineSDK.login(in: self) { result in
+            switch result {
+            case let .success(account):
+                print(account)
+            case let .failure(error):
+                print(error)
+            }
+        }
+    }
 
+    @IBAction private func didSelectLoginViaGoogle(_ sender: UIButton) {
+        googleSDK.login(viewcontroller: self, clientID: Constant.gooogleClientID) { result in
+            switch result {
+            case let .success(profile):
+                print(profile)
+            case let .failure(error):
+                print(error)
+            }
+        }
+    }
+}

@@ -1,11 +1,13 @@
 use_frameworks!
-
-platform :ios, '9.0'
+platform :ios, '10.0'
 
 target 'tms-social-lib_Example' do
   #pod 'tms-social-lib', :path => '../'
 
-  pod 'TwitterKit5', '5.2.0'
+  pod 'TwitterKit5', '~> 5.2.0'
+  pod 'LineSDKSwift', '~> 5.0'
+  pod 'GoogleSignIn', '~> 6.0.1'
+  
 
   target 'tms-social-lib_Tests' do
     inherit! :search_paths

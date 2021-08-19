@@ -10,14 +10,12 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        TMSTwitter.configuration(TMSConfiguration(consumerKey: "aHGfxgpOOT4gyknqVh20sNq6r",
-                                                  consumerSecret: "KFg3MJjE9tgg1m5Tz7veJvTsvxPgT6z58EBqDYFE99cidC4WsO"))
+        TMSTwitter.configuration(TMSConfiguration(consumerKey: Constant.consumerKey,
+                                                  consumerSecret: Constant.consumerSecret))
+        TMSLine.setup(channelID: Constant.channelID)
         // Override point for customization after application launch.
         return true
     }
@@ -43,15 +41,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        if TMSTwitter.application(app, openURL: url, options: options) {
+
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
+        if TMSTwitter.application(app, open: url, options: options) {
             return true
         }
-        
+
+        if TMSLine.application(app, open: url, options: options) {
+            return true
+        }
+
+        if TMSGoogle.application(open: url) {
+            return true
+        }
+
         return false
     }
-
-
 }
-
