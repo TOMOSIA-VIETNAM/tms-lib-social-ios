@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vhz-1v-jfU">
-                                <rect key="frame" x="30" y="273.5" width="315" height="120"/>
+                                <rect key="frame" x="30" y="251" width="315" height="165"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abw-g2-QvK">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
@@ -41,6 +41,13 @@
                                         <state key="normal" title="Login via Facebook"/>
                                         <connections>
                                             <action selector="didSelectLoginViaFacebook:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lzY-p0-6kh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrV-ht-eal">
+                                        <rect key="frame" x="0.0" y="135" width="315" height="30"/>
+                                        <state key="normal" title="Login via Google"/>
+                                        <connections>
+                                            <action selector="didSelectLoginViaGoogle:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qKc-YH-Fd5"/>
                                         </connections>
                                     </button>
                                 </subviews>
