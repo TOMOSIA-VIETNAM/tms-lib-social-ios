@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    let facebookSDK = TMSFacebook()
     let twitterSDK = TMSTwitter()
     let lineSDK = TMSLine()
 
@@ -20,6 +21,17 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    @IBAction private func didSelectLoginViaFacebook(_ sender: UIButton) {
+        facebookSDK.login(controller: self) { result in
+            switch result {
+            case let .success(profile):
+                print(profile)
+            case let .failure(error):
+                print(error)
+            }
+        }
     }
 
     @IBAction private func didSelectLoginViaTwitter(_ sender: UIButton) {

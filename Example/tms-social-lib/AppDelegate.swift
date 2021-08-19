@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        TMSFacebook.configuration(application, didFinishLaunchingWithOptions: launchOptions)
         TMSTwitter.configuration(TMSConfiguration(consumerKey: Constant.consumerKey,
                                                   consumerSecret: Constant.consumerSecret))
         TMSLine.setup(channelID: Constant.channelID)
@@ -43,6 +44,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
+        if TMSFacebook.application(app, open: url, options: options) {
+            return true
+        }
+
         if TMSTwitter.application(app, open: url, options: options) {
             return true
         }
