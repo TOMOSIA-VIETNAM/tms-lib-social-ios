@@ -24,6 +24,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction private func didSelectLoginViaApple(_ sender: UIButton) {
+        if #available(iOS 13.0, *) {
+            let tmsApple = TMSApple(handlerCompletion: { result in
+                switch result {
+                case let .success(profile):
+                    print(profile)
+                case let .failure(error):
+                    print(error)
+                }
+            })
+            tmsApple.login(controller: self)
+        }
+    }
+
     @IBAction private func didSelectLoginViaFacebook(_ sender: UIButton) {
         facebookSDK.login(controller: self) { result in
             switch result {
