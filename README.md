@@ -21,6 +21,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 - [How to use login via Facebook?](./README/Facebook.md)
 - [How to use login via Twitter?](./README/Twitter.md)
 - [How to use login via Line?](./README/Line.md)
+- [How to use login via Apple?](./README/Apple.md)
 
 ## Installation
 

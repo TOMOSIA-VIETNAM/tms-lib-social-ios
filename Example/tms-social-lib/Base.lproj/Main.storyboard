@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vhz-1v-jfU">
-                                <rect key="frame" x="30" y="251" width="315" height="165"/>
+                                <rect key="frame" x="30" y="228.5" width="315" height="210"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abw-g2-QvK">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
@@ -43,11 +43,18 @@
                                             <action selector="didSelectLoginViaFacebook:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lzY-p0-6kh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrV-ht-eal">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NW-dx-gjT">
                                         <rect key="frame" x="0.0" y="135" width="315" height="30"/>
                                         <state key="normal" title="Login via Google"/>
                                         <connections>
-                                            <action selector="didSelectLoginViaGoogle:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qKc-YH-Fd5"/>
+                                            <action selector="didSelectLoginViaGoogle:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pNK-Cs-UBf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7M-ol-Zy4">
+                                        <rect key="frame" x="0.0" y="180" width="315" height="30"/>
+                                        <state key="normal" title="Login via Apple"/>
+                                        <connections>
+                                            <action selector="didSelectLoginViaApple:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="e65-OW-68I"/>
                                         </connections>
                                     </button>
                                 </subviews>
