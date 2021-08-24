@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     let facebookSDK = TMSFacebook()
     let twitterSDK = TMSTwitter()
     let lineSDK = TMSLine()
+    let googleSDK = TMSGoogle()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +51,17 @@ class ViewController: UIViewController {
             switch result {
             case let .success(account):
                 print(account)
+            case let .failure(error):
+                print(error)
+            }
+        }
+    }
+
+    @IBAction private func didSelectLoginViaGoogle(_ sender: UIButton) {
+        googleSDK.login(viewcontroller: self, clientID: Constant.gooogleClientID) { result in
+            switch result {
+            case let .success(profile):
+                print(profile)
             case let .failure(error):
                 print(error)
             }

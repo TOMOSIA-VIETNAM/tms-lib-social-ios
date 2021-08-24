@@ -56,6 +56,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return true
         }
 
+        if TMSGoogle.application(open: url) {
+            return true
+        }
+
         return false
     }
 }
