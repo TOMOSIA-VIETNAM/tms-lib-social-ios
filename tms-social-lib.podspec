@@ -7,36 +7,29 @@
 #
 
 Pod::Spec.new do |s|
+  s.platform         = :ios, '13.0'
+  s.ios.deployment_target = '13.0'
   s.name             = 'tms-social-lib'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of tms-social-lib.'
+  s.version          = '1.0.0'
+  s.summary          = 'This is a library of Tomosia Compạny for social login'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/Phuong Vo/tms-social-lib'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/TOMOSIA-VIETNAM/tms-lib-social-ios'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Phuong Vo' => 'phuong.vo@tomosia.com' }
-  s.source           = { :git => 'https://github.com/Phuong Vo/tms-social-lib.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'Tomosia Viet Nam Co.Ltd' => 'phuong.vo@tomosia.com' }
+  s.source           = { :git => 'https://github.com/TOMOSIA-VIETNAM/tms-lib-social-ios', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '9.0'
 
-  s.source_files = 'tms-social-lib/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'tms-social-lib' => ['tms-social-lib/Assets/*.png']
-  # }
+  s.source_files = 'tms-social-lib/Classes/**/*.swift'
+  s.requires_arc = true
+  s.frameworks = 'UIKit', 'AuthenticationServices'
+  s.dependency 'FacebookCore', '0.9.0'
+  s.dependency 'FacebookLogin', '0.9.0'
+  s.dependency 'TwitterKit5', '5.2.0'
+  s.dependency 'LineSDKSwift', '5.7.0'
+  s.dependency 'GoogleSignIn', '6.0.1'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+
+
 end
