@@ -1,14 +1,14 @@
 use_frameworks!
-platform :ios, '10.0'
+platform :ios, '13.0'
 
 target 'tms-social-lib_Example' do
   #pod 'tms-social-lib', :path => '../'
 
-  pod 'FacebookCore', '~>0.9.0'
-  pod 'FacebookLogin', '~>0.9.0'
-  pod 'TwitterKit5', '~> 5.2.0'
-  pod 'LineSDKSwift', '~> 5.0'
-  pod 'GoogleSignIn', '~> 6.0.1'
+  pod 'FacebookCore', '0.9.0'
+  pod 'FacebookLogin', '0.9.0'
+  pod 'TwitterKit5', '5.2.0'
+  pod 'LineSDKSwift', '5.0'
+  pod 'GoogleSignIn', '6.0.1'
   
 
   target 'tms-social-lib_Tests' do
