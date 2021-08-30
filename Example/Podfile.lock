@@ -38,19 +38,26 @@ PODS:
   - LineSDKSwift/Core (5.7.0)
   - Nimble (8.0.9)
   - Quick (2.2.1)
+  - tms-social-lib (1.0.1):
+    - FacebookCore (= 0.9.0)
+    - FacebookLogin (= 0.9.0)
+    - GoogleSignIn (= 6.0.1)
+    - LineSDKSwift (= 5.7.0)
+    - TwitterKit5 (= 5.2.0)
   - TwitterCore (3.2.0)
   - TwitterKit5 (5.2.0):
     - TwitterCore (>= 3.1.0)
 
 DEPENDENCIES:
-  - FacebookCore (~> 0.9.0)
-  - FacebookLogin (~> 0.9.0)
+  - FacebookCore (= 0.9.0)
+  - FacebookLogin (= 0.9.0)
   - FBSnapshotTestCase (~> 2.1.4)
-  - GoogleSignIn (~> 6.0.1)
-  - LineSDKSwift (~> 5.0)
+  - GoogleSignIn (= 6.0.1)
+  - LineSDKSwift (= 5.7.0)
   - Nimble (~> 8.0.7)
   - Quick (~> 2.2.0)
-  - TwitterKit5 (~> 5.2.0)
+  - tms-social-lib (from `../`)
+  - TwitterKit5 (= 5.2.0)
 
 SPEC REPOS:
   trunk:
@@ -69,6 +76,10 @@ SPEC REPOS:
     - TwitterCore
     - TwitterKit5
 
+EXTERNAL SOURCES:
+  tms-social-lib:
+    :path: "../"
+
 SPEC CHECKSUMS:
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   FacebookCore: ba86524b66cfa86d0f8e65d08faa8504a9f732dd
@@ -82,9 +93,10 @@ SPEC CHECKSUMS:
   LineSDKSwift: f9c232f89185b887b5725aa278325f3a23e33bbc
   Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
   Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
+  tms-social-lib: 17a8a73443b4fb69a940623490d897b2a5ccfe50
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit5: 64095dfefcf39be2355711ef27112d55e340d90e
 
-PODFILE CHECKSUM: f1ba8721c3af5a641bb0f3ca18f5c8e6e418cf72
+PODFILE CHECKSUM: 7fca37878848e629deb9fce2b7f45a68d842b0c4
 
-COCOAPODS: 1.10.2
+COCOAPODS: 1.10.1

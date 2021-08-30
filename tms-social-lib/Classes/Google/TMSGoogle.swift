@@ -24,6 +24,10 @@ public enum TMSGoogleResult {
 }
 
 public class TMSGoogle {
+    /// Initialize TMSGoogle
+    public init() {
+    }
+
     /// This method should be called from your `UIApplicationDelegate`'s `application:openURL:options:`
     /// method.
     /// - Parameter url: The URL that was passed to the app.

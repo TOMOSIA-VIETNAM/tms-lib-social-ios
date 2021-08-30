@@ -42,7 +42,10 @@ public enum TMSFacebookResult {
 public class TMSFacebook {
     let loginManager = LoginManager()
 
-    
+    /// Initialize TMSFacebook
+    public init() {
+    }
+
     /// Start login default
     /// - Parameter completion:  handler the callback success or failure
     public func login(completion: @escaping (TMSFacebookResult) -> Void) {
@@ -107,7 +110,7 @@ public class TMSFacebook {
     /// - Parameters:
     ///   - application: The application as passed to [UIApplicationDelegate application:didFinishLaunchingWithOptions:].
     ///   - launchOptions: The launchOptions as passed to [UIApplicationDelegate application:didFinishLaunchingWithOptions:].
-    public class func configuration(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) {
+    public class func configuration(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 
