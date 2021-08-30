@@ -26,7 +26,7 @@ public class TMSApple: UIViewController, ASAuthorizationControllerDelegate, ASAu
     weak var viewController: UIViewController!
     private var handlerCompletion: ((TMSAppleResult) -> Void)?
 
-    init(handlerCompletion: @escaping (TMSAppleResult) -> Void) {
+    public init(handlerCompletion: @escaping (TMSAppleResult) -> Void) {
         self.handlerCompletion = handlerCompletion
         super.init(nibName: nil, bundle: nil)
     }

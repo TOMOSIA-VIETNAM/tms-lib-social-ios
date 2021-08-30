@@ -30,6 +30,10 @@ public enum TMSLineResult<T: Codable> {
 }
 
 public class TMSLine {
+    /// Initialize TMSLine
+    public init() {
+    }
+
     /// Setup ChannelID and UniversalLink for LineSDK
     /// - Parameters:
     ///   - channelID: The channel ID for your app.
@@ -51,7 +55,7 @@ public class TMSLine {
     ///   - parameters: The parameters used during the login process. For more information,
     ///                 see `LoginManager.Parameters`.
     ///   - completion: The completion closure to be invoked when the login action is finished.
-    public func login(permissions: Set<LoginPermission> = [.profile], in controller: UIViewController, parameters: LoginManager.Parameters = .init(), completion: @escaping (TMSLineResult<TMSLineAccount>) -> Void) {
+    public func login(permissions: Set<LoginPermission> = [.profile], in controller: UIViewController? = nil, parameters: LoginManager.Parameters = .init(), completion: @escaping (TMSLineResult<TMSLineAccount>) -> Void) {
         if LoginManager.shared.isAuthorized {
             getProfile(completion: completion)
         } else {
