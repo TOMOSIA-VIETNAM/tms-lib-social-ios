@@ -10,7 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     let facebookSDK = TMSFacebook()
-    let twitterSDK = TMSTwitter()
+    let twitterSDK = TMSTwitter(configuration: TMSConfiguration(consumerKey: Constant.consumerKey,
+                                                                consumerSecret: Constant.consumerSecret,
+                                                                requestTokenURL: Constant.requestTokenURL,
+                                                                authorizeURL: Constant.authorizeURL,
+                                                                accessTokenURL: Constant.accessTokenURL))
     let lineSDK = TMSLine()
     let googleSDK = TMSGoogle()
 
@@ -50,7 +54,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction private func didSelectLoginViaTwitter(_ sender: UIButton) {
-        twitterSDK.login { result in
+        twitterSDK.login(callBackURL: Constant.callBackURLTwitter) { result in
             switch result {
             case let .success(session):
                 print(session)

@@ -6,10 +6,9 @@
 //  Copyright © 2021 CocoaPods. All rights reserved.
 //
 
-import FacebookCore
-import FacebookLogin
+import FBSDKCoreKit
+import FBSDKLoginKit
 import Foundation
-
 public struct TMSFBProfile {
     public var userID: String?
     public var name: String?
@@ -122,8 +121,7 @@ public class TMSFacebook {
     /// - Returns:YES if the url was intended for the Facebook SDK, NO if not.
 
     public class func application(_ application: UIApplication, open url: URL, options: [AnyHashable: Any]) -> Bool {
-        ApplicationDelegate.shared.application(application, open: url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplication.OpenURLOptionsKey.annotation])
-        return true
+        return ApplicationDelegate.shared.application(application, open: url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplication.OpenURLOptionsKey.annotation])
     }
 
     /// Call this method from the [UIApplicationDelegate application:openURL:sourceApplication:annotation:] method of the AppDelegate for your app. It should be invoked for the proper processing of responses during interaction with the native Facebook app or Safari as part of SSO authorization flow or Facebook dialogs.

@@ -14,8 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         TMSFacebook.configuration(application, didFinishLaunchingWithOptions: launchOptions)
-        TMSTwitter.configuration(TMSConfiguration(consumerKey: Constant.consumerKey,
-                                                  consumerSecret: Constant.consumerSecret))
         TMSLine.setup(channelID: Constant.channelID)
         // Override point for customization after application launch.
         return true
@@ -48,10 +46,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return true
         }
 
-        if TMSTwitter.application(app, open: url, options: options) {
-            return true
-        }
-
         if TMSLine.application(app, open: url, options: options) {
             return true
         }
@@ -59,7 +53,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if TMSGoogle.application(open: url) {
             return true
         }
-
+        
+        if url.host == "oauth-callback" {
+            TMSTwitter.handleURL(url: url)
+        }
+        
         return false
     }
 }

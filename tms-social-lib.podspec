@@ -22,10 +22,10 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
-  s.dependency 'FacebookCore', '0.9.0'
-  s.dependency 'FacebookLogin', '0.9.0'
-  s.dependency 'TwitterKit5', '5.2.0'
+
+  s.dependency 'FBSDKCoreKit',  '11.2.1'
+  s.dependency 'FBSDKLoginKit',  '11.2.1'
   s.dependency 'LineSDKSwift', '5.7.0'
   s.dependency 'GoogleSignIn', '6.0.1'
-
+  s.dependency 'OAuthSwift', '2.2.0'
 end
